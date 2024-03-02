@@ -4,7 +4,7 @@ import useTodoSlice from '../hooks/useTodoSlice';
 
 const TodoForm = () => {
   const { value, setValue, changeHandle } = useInput({ text: '' });
-  const appendTodo = useTodoSlice({ value, setValue });
+  const { appendTodo } = useTodoSlice({ value, setValue });
   return (
     <div>
       <input type="text" value={value} onChange={changeHandle} />
